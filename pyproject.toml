@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "todolist"
+version = "0.1.0"
+description = ""
+authors = ["-- <yaliyarov@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+flask-pydantic = "^0.11.0"
+pydantic = "^1.10.8"
+sqlalchemy = "^2.0.15"
+python-dotenv = "^1.0.0"
+flask-login = "^0.6.2"
+psycopg2-binary = "^2.9.6"
+flask-swagger-ui = "^4.11.1"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
