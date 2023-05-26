@@ -1,10 +1,19 @@
+from enum import Enum
+
 from pydantic import BaseModel
 
 from backend.user.schemas import UserReadSchema
 
 
+class Status(Enum):
+    new = 'new'
+    active = 'active'
+    completed = 'completed'
+
+
 class TaskBaseSchema(BaseModel):
     name: str
+    status: Status
 
 
 class TaskReadSchema(TaskBaseSchema):
@@ -18,6 +27,5 @@ class TaskCreateSchema(TaskBaseSchema):
     user_id: int
 
 
-class TaskUpdateSchema(TaskBaseSchema):
-    description: str
-    user_id: int
+class TaskUpdateSchema(BaseModel):
+    status: Status
